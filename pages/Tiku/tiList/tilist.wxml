@@ -1,0 +1,28 @@
+<block wx:if='{{!tilist.length}}'>
+<view style="color:#000000">暂无题库</view>
+</block>
+<block wx:for="{{tilist}}" wx:key="{{objectId}}">
+<view class="custom-class van-card" bindtap="getAnswer_info" data-objectid="{{item.objectId}}">
+  <view class="van-card__thumb">
+    <image wx:if="{{ item.thumb.url }}" src="{{ item.thumb.url }}" class="van-card__img thumb-class" />
+    <slot wx:else name="thumb" />
+  </view>
+  <view class="van-card__content">
+    <view wx:if="{{ item.title}}" class="van-card__row">
+      <view wx:if="{{ item.title }}" class="van-card__title title-class">{{ item.title }}</view>
+    </view>
+    <slot wx:else name="title" />
+    <view wx:if="{{ item.desc}}" class="van-card__row">
+      <view wx:if="{{ item.desc }}" class="van-card__desc desc-class">{{ item.desc }}</view>
+      
+    </view>
+    <slot wx:else name="desc" />
+    <!--slot name="tags" /-->
+  </view>
+  <view class="van-card__footer">
+  <view wx:if="{{item.num}}" class='num'>共:{{item.num}}题</view>
+    <slot name="footer" />
+  </view>
+</view>
+</block>
+<!--/navigator-->

@@ -1,0 +1,43 @@
+.chengji{
+  width: 100%;
+  height: 100%;
+}
+.top{
+    text-align: center;
+    background: #3891f8;
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+    padding: 24rpx 0;
+}
+.photo{
+    width: 200rpx;
+    height:200rpx;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #d4d9f5;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+.photo image{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.line_x{
+    width: 100%;
+    height: 2rpx;
+    background-color: #f3f3f3;
+}
+
+.lists{
+  width: 100%;
+  margin-left: 10rpx;
+  margin-top: 20rpx;
+  color: #00688B;
+  font-size: 40rpx;
+  
+}
+

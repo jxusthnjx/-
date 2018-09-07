@@ -1,0 +1,30 @@
+<!--新闻列表页面模板-->
+<!--
+id:news.news_id,
+title:news.news_title,
+data:news.news_date,
+parise:news.news_praise_count,
+commont:news.news_comment_count,
+summary:news.news_summary,
+icons:news.news_icon,
+style:news.news_style
+-->
+
+<!--普通模式-->
+<template name="newsStyle2">
+    <navigator url="../news/news?id={{objectId}}">
+    <view class="article__item">
+        <view class="article__thumb">
+            <image class="article__image" src="{{ icon }}"></image>
+        </view>
+        <view class="article__info">
+            <view class="article__title article__title__large">{{ title }}</view>
+            <view class="article__desc">
+                <text wx:if="{{ desc }}" class="article__source">{{ desc }}</text>
+                <text class="article__time">{{ createdAt }}</text>
+                <text class='article__time'>阅读:{{renderNum}}</text>
+            </view>
+        </view>
+    </view>
+    </navigator>
+</template>

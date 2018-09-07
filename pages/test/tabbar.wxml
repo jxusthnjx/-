@@ -1,0 +1,14 @@
+<view class="chengji">
+  <!--顶部头像-->
+  <view class="top">
+    <navigator url="../login/login" hover-class="navigator-hover" class="photo">
+      <image src="http://ojhq3mgil.bkt.clouddn.com/478/20161227/201612271616015049.jpg"></image>
+    </navigator>
+    <view class="phone_num">张三丰</view>
+  </view>
+  <!--/顶部头像end-->
+<view class='lists'>科目名称:计算机基础</view>
+<view class='lists'>总分:100分</view>
+<view class='lists'>你的成绩:90分</view>
+</view>
+

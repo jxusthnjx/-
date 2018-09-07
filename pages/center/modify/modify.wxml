@@ -1,0 +1,18 @@
+<!--pages/shopmanage/shoppwd.wxml-->
+<view class="modiyf">
+ 
+   <view class="classname">
+   <view class="tips">本小程序不能修改账号,只能修改密码.原始密码是你的身份证号后六位.你现在可以修改原始密码.修改后请牢记你的密码.否则无法找回.</view>
+
+ <form bindsubmit="editpwd">     
+         <view class="xing">新密码
+           <input placeholder-class='placeholder'  placeholder='请输入新密码'  class="in" name='xin' />
+         </view>
+         <view class="xing">确认密码
+           <input placeholder-class='placeholder'  placeholder='请确认密码'  class="in" name='queren' />
+         </view>
+<button form-type="submit" hover-class='button-hover' class='su'>修改</button>
+   </form>   
+   </view>
+
+</view> 

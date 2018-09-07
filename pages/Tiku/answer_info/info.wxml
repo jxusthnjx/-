@@ -1,0 +1,31 @@
+<view class='page' bindtouchend='handletouchend' bindtouchstart='handletouchstart' bindtouchmove='handletouchmove'>
+  <view class='swiper-lists' >
+  <view class='header'>
+    <view class='xiao'>
+    <view class='tihao'>第{{currentid+1}}/{{count}}题：</view>
+      <view class='type' wx:if="{{tilist[currentid].Type}}">{{titype}}</view>
+      <view class='chapter' wx:if="{{tilist[currentid].Chapter}}">第{{chapter}}章</view>
+      <view class='rongyi' wx:if="{{level=='1'}}">容易</view>
+      <view class='zhongdeng' wx:if="{{level=='2'}}">中等</view>
+      <view class='nan' wx:if="{{level=='3'}}">较难</view>
+      <view class='nan' wx:if="{{necessary}}">必考题</view>
+    </view>
+    <view wx:if="{{tilist[currentid].Content.charAt(0)}}=='\\'">
+    
+    </view>
+    <text decode='{{true}}'>&emsp;{{content}}</text>
+    <view wx:if='{{tilist[currentid].OptionsA}}'>A、optionsa</view>
+    <view wx:if='{{tilist[currentid].OptionsB}}'>B、{{tilist[currentid].OptionsB}}</view>
+    <view wx:if='{{tilist[currentid].OptionsC}}'>C、{{tilist[currentid].OptionsC}}</view>
+    <view wx:if='{{tilist[currentid].OptionsD}}'>D、{{tilist[currentid].OptionsD}}</view>
+    <view wx:if='{{tilist[currentid].OptionsE}}'>E、{{tilist[currentid].OptionsE}}</view>
+    <view wx:if='{{tilist[currentid].OptionsF}}'>F、{{tilist[currentid].OptionsF}}</view>
+  </view>
+</view>
+<view class="analysis">
+    <view class="analysis-header">题目详解</view>
+    <view class="analysis-content">{{tilist[currentid].Answer}}</view>
+    <view class="analysis-content">{{tilist[currentid].tip}}</view>
+</view>
+<!--button bindtap='next'>下一题</button-->
+</view>

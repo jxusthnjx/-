@@ -1,0 +1,58 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/news/news",
+    "pages/xiaoyouquan/mail",
+    "pages/xiaoyouquan/listDetail/listDetail",
+    "pages/Login/login",
+    "pages/center/index",
+    "pages/Tiku/index",
+    "pages/Tiku/tiList/tilist",
+    "pages/xiaoyouquan/write/write",
+    "pages/Tiku/answer_info/answer_info",
+    "pages/Tiku/kaoshi/kaoshi",
+    "pages/Tiku/answer_mark/answer_mark",
+    "pages/center/suggest/suggest",
+    "pages/center/about/about"
+    
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "华南技校题库",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#318efb",
+    "borderStyle": "#3891f8",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/news.png",
+        "selectedIconPath": "images/news1.png",
+        "text": "文章阅读"
+      },
+      {
+        "pagePath": "pages/Tiku/index",
+        "iconPath": "images/tiku.png",
+        "selectedIconPath": "images/tiku1.png",
+        "text": "考试题库"
+      },
+      {
+        "pagePath": "pages/xiaoyouquan/mail",
+        "iconPath": "images/mood.png",
+        "selectedIconPath": "images/mood1.png",
+        "text": "学习心得"
+      },
+      {
+        "pagePath": "pages/center/index",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me1.png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

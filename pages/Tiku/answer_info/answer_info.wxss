@@ -1,0 +1,235 @@
+page{
+  background-color: #fff;
+}
+.contanter{
+
+  width: 100%;
+  height:100vh;
+  overflow-x: hidden;
+}
+
+.header{
+  display: block;
+  background-color: #fff;
+  border-radius: 5rpx;
+  margin: 0 0 3rpx 0;
+  height: 48rpx;
+  border-bottom: 5rpx;
+  border-bottom-color: #c0c0c0;
+}
+
+.tihao{
+  display: inline-block;
+  width: auto;
+  
+  margin: 0 0 6rpx 15rpx;
+  border-radius: 5rpx;
+  background: #45b0ee;
+  font-size: 24rpx;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 34rpx;
+  vertical-align: middle; 
+}
+
+.type {
+  display:inline-block;
+  width: auto;
+
+  margin: 0 0 6rpx 15rpx;
+  border-radius: 5rpx;
+  background: #00bcd5;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 34rpx;
+  vertical-align: middle;  
+}
+.chapter {
+  display:inline-block;
+  width: auto;
+
+  margin: 0 0 6rpx 15rpx;
+  border-radius: 5rpx;
+  background: #0c8cd6;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 34rpx;
+  vertical-align: middle;  
+}
+
+.rongyi {
+  display:inline-block;
+  width: auto;
+
+  margin: 0 0 6rpx 15rpx;
+  border-radius: 5rpx;
+  background: #06be3e;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 34rpx;
+  vertical-align: middle;  
+}
+.zhongdeng {
+  display:inline-block;
+  width: auto;
+
+  margin: 0 0 6rpx 15rpx;
+  border-radius: 5rpx;
+  background: #d5d807;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 34rpx;
+  vertical-align: middle;  
+}
+.nan {
+  display:inline-block;
+  width: auto;
+
+  margin: 0 0 6rpx 15rpx;
+  border-radius: 5rpx;
+  background: #df0d18;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 34rpx;
+  vertical-align: middle;  
+}
+
+
+
+.content{
+  min-height: 150rpx;
+  background-color: #fff;
+  border-radius: 5rpx;
+  font-family: "楷体";
+  height: auto;
+  border-bottom: 5rpx;
+  border-bottom-color: #c0c0c0;
+  font-size: 35rpx;
+  padding-top: 20rpx;
+}
+
+.xuanxiang{
+  min-height: 50rpx;
+  background-color: #fff;
+  border-radius: 5rpx;
+  margin: 0rpx;
+  height: auto;
+  border-bottom: 5rpx;
+  border-bottom-color: #c0c0c0;
+  font-size: 35rpx;
+  font-family: "楷体";
+}
+
+.status-lists{
+  max-height: 500rpx;
+  padding: 0 0 24rpx;
+  border-top: 1rpx solid #eaeaea;
+  background:#fff;
+  z-index: 100;
+  overflow: auto;
+  font-family: "楷体";
+  font-size: 35rpx;
+}
+
+.status-lists .status-list{
+  float: left;
+  width: 98rpx;
+  height: 98rpx;
+  margin: 24rpx 0 0 20rpx;
+  border-radius: 50rpx;
+  border: 1rpx solid #ccc;
+  font-size: 30rpx;
+  line-height: 98rpx;
+  text-align: center;
+  color: #ccc;
+}
+
+.xuanxiangpic{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #fff;
+  vertical-align: middle;  
+
+}
+
+.picture{
+  background-color: #fff;
+  vertical-align: middle;  
+  margin-left: auto;
+  margin-right: auto;
+}
+/*题目详解*/
+.analysis{
+  /*position: fixed;*/
+  /*margin: 100rpx 0 0;*/
+  padding:25rpx 30rpx 40rpx;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  background: #fff;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #666;
+}
+.analysis .analysis-header{
+  padding: 8rpx 0;
+  font-size: 34rpx;
+  color: #00bcd5;
+}
+
+.kongbai{
+  height: 100%;
+  background-color: #fff;
+}
+
+/*页脚，收藏*/
+.footer-layer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+}
+
+.footer{
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 0;
+  width: 100%;
+  transform: translate3d(0, 100%, 0px);
+  -webkit-transform: translate3d(0, 100%, 0px);
+  z-index: 100;
+}
+.count{
+  position: absolute;
+  box-sizing: border-box;
+  top: -93rpx;
+  width: 100%;
+  padding: 30rpx 30rpx;
+  background: #fff;
+  font-size: 24rpx;
+  overflow: hidden;
+  zoom:1;
+  z-index:1000;
+}
+.count .collect{
+  float: left;
+  height: 40rpx;
+  padding-left: 45rpx;
+  background: url("http://bmob-cdn-17114.b0.upaiyun.com/2018/08/26/19282cd5403f22868079ef440a550eef.png") no-repeat left center/34rpx 34rpx;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 44rpx;
+}
+.count .collect.active{
+  background: url("http://bmob-cdn-17114.b0.upaiyun.com/2018/08/26/2eefbac340ebe89f80ff6cf08dcf1856.png") no-repeat left center/34rpx 34rpx;  
+}
+
+.thepage{
+  height: 100%;
+}

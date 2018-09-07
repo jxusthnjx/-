@@ -1,0 +1,25 @@
+<view class="wrapperm">
+  <view class="loginformm">
+    <view id="owl-loginm">
+      <image class="headm" src="../../images/owl-login.png"></image>
+      <view class="handm {{inputPassword ? 'hand-passwordm' : ''}}"></view>
+      <view class="handm hand-rm {{inputPassword ? 'hand-r-passwordm' : ''}}"></view>
+      <view class="armsm">
+        <image class="armm {{inputPassword ? 'arm-passwordm' : ''}}" src="../../images/owl-login-arm.png"></image>
+        <image class="armm arm-rm {{inputPassword ? 'arm-r-passwordm' : ''}}" src="../../images/owl-login-arm.png"></image>
+      </view>
+    </view>
+    <view class="control-groupm">
+      <view class="controlm">
+        <input type="number" bindinput="usernameInput" placeholder="输入一卡通学号"></input>
+      </view>
+      <view class="controlm">
+        <input type="password" bindinput="passwordInput" bindfocus="pwdFocus" bindblur="pwdBlur" placeholder="输入身份证最后六位"></input>
+      </view>
+      <button disabled="{{isLoading}}" loading="{{isLoading}}" bindtap="bindIdentity" type="primary" open-type='getUserInfo' bindgetuserinfo='login'>登  陆</button>
+      <view class='infom'>{{info}}</view>
+    </view>
+  </view>
+  
+</view>
+

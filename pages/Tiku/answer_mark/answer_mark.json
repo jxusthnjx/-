@@ -1,0 +1,6 @@
+{
+      "navigationBarTitleText": "考试成绩",
+      "navigationBarBackgroundColor": "#3891f8",
+      "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":false
+  }

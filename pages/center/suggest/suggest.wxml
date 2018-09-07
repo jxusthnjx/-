@@ -1,0 +1,20 @@
+<!--adviceAccount.wxml-->
+
+
+<view class="advice">
+
+      <view class="second">
+          <text class="labell">Tips:使用过程中的bug,哪些地方需要改进,需要添加什么功能,都可以写在下面.</text>
+      </view>
+      <form bindsubmit='suggests'>
+            <view class="last">
+          <textarea class="third-input" placeholder="请把你遇到的问题或者建议写出来吧" placeholder-style="color:#666666;" name="description"  />        
+      </view>
+  <view class="submit">
+    <button class="left-button" form-type='submit'>提交问题</button>
+</view>
+      </form>
+
+</view>
+
+

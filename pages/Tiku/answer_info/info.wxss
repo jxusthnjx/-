@@ -1,0 +1,171 @@
+
+.header{
+  display: block;
+  padding: 27rpx 30rpx 36rpx;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  background: #fff;
+}
+.xiao{
+  display: inline-block;
+  width:100%;
+  height: auto;
+  border-bottom:1rpx solid #eaeaea;
+  border-top: 1rpx solid #eaeaea;
+  margin-bottom: 10rpx;
+  
+}
+.tihao{
+  display: inline-block;
+  width: auto;
+  height: 34rpx;
+  margin: 0 0 0 0rpx;
+  border-radius: 5rpx;
+  background: #747ed4;
+  font-size: 24rpx;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 36rpx;
+  vertical-align: middle; 
+}
+.type {
+  display:inline-block;
+  width: auto;
+  height: 34rpx;
+  margin: 0 0 0 15rpx;
+  border-radius: 5rpx;
+  background: #00bcd5;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 36rpx;
+  vertical-align: middle;  
+}
+.chapter {
+  display:inline-block;
+  width: auto;
+  height: 34rpx;
+  margin: 0 0 0 15rpx;
+  border-radius: 5rpx;
+  background: #0c8cd6;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 36rpx;
+  vertical-align: middle;  
+}
+
+.rongyi {
+  display:inline-block;
+  width: auto;
+  height: 34rpx;
+  margin: 0 0 0 15rpx;
+  border-radius: 5rpx;
+  background: #06be3e;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 36rpx;
+  vertical-align: middle;  
+}
+.zhongdeng {
+  display:inline-block;
+  width: auto;
+  height: 34rpx;
+  margin: 0 0 0 15rpx;
+  border-radius: 5rpx;
+  background: #d5d807;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 36rpx;
+  vertical-align: middle;  
+}
+.nan {
+  display:inline-block;
+  width: auto;
+  height: 34rpx;
+  margin: 0 0 0 15rpx;
+  border-radius: 5rpx;
+  background: #df0d18;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 36rpx;
+  vertical-align: middle;  
+}
+.poster{
+  display: block;
+  padding: 0 30rpx;
+  height: 348rpx;
+  margin: auto;
+  background: #fff;
+}
+.poster image,.poster video{
+  width: 100%;
+  height: 348rpx;
+  background-color: #eeeeee;
+}
+.container{
+ background: #fff;
+}
+.list{
+  position: relative;
+  padding: 27rpx 30rpx 27rpx 94rpx;
+  border-bottom: 1px solid #eee;
+  font-size: 28rpx;
+  color: #333;
+}
+.status-lists{
+  max-height: 500rpx;
+  padding: 0 0 24rpx;
+  border-top: 1rpx solid #eaeaea;
+  background: rgb(151, 150, 150);
+  z-index: 100;
+  overflow: auto;
+}
+
+/**swiper**/
+page{
+  background-color: #cfc8c8;
+}
+
+.swiper-lists{
+  position: relative;
+  width: 100%;
+  min-height:100%;
+  overflow-x: hidden;
+  background-color: #b1a9a9
+}
+.swiper-lists .swiper-list{
+  position: absolute;
+  width: 100%;
+  height:100%;
+  background-color: #b1a9a9
+}
+.swiper-lists .swiper-list.prev{
+  top: 0;  
+	transform: translate3d(-100%, 0 , 0px); 
+  -webkit-transform: translate3d(-100%, 0 , 0px); 
+}
+.swiper-lists .swiper-list.next{
+  top: 0;  
+	transform: translate3d(100%, 0 , 0px); 
+	-webkit-transform: translate3d(100%, 0 , 0px); 
+}
+/*题目详解*/
+.analysis{
+  margin: 100rpx 0 0;
+  padding:25rpx 30rpx 40rpx;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  background: #fff;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #666;
+}
+.analysis .analysis-header{
+  padding: 8rpx 0;
+  font-size: 34rpx;
+  color: #00bcd5;
+}

@@ -1,0 +1,7 @@
+<view class="weui-footer">
+    <view class="weui-footer__links">
+        <view class="weui-footer__link">广东省核工业华南高级技工学校</view>
+    </view>
+    
+    <view class="weui-footer__text">Copyright © 2018-2018 计算机组</view>
+</view>

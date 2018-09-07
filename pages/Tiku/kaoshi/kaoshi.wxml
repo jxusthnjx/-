@@ -1,0 +1,71 @@
+<!--考试确认界面,刚开始显示-->
+<view hidden='{{hidenquren}}' class='contanter'>
+<view class="simulate-tx">
+    <image  mode="aspectFill" src="{{userInfo.userPic}}"/>
+</view>
+<view class="simulate-name">{{userInfo.studentname}}</view>
+<view class="simulate-info">
+    <view>科目:{{coursename}}</view>
+    <view> 考生班级：{{userInfo.userclass}}</view>
+    <view>总分:{{totalscore}}分</view>
+    <view> 考试时间：{{kaoshitime}}分钟</view>
+    <view> 考生须知：诚信考试,不得舞弊,退出界面考试作废!</view>
+</view>
+<button bindtap='queren' class="simulate-btn">开始考试</button>
+</view>
+
+<!--考试界面-->
+<view hidden="{{hidenkaoshi}}" class='contanter' bindtouchend='handletouchend' bindtouchstart='handletouchstart' bindtouchmove='handletouchmove'>
+  <view class='header'>
+    <view class='tihao'>第{{currentid+1}}/{{kaoshiti.length}}题</view>
+  </view>
+  <view class='content' wx:if="{{contentimg}}">
+    <image mode='aspectFit' src="{{contentimg}}" data-urls="{{contentimg}}" bindtap='seeBig' />
+  </view>
+  <view class='content' wx:else>{{currentid+1}}、{{content}}</view>
+  <image style="margin: 0 auto;background-color:#fff;" src="{{picture}}" mode='aspectFit' wx:if="{{picture}}" data-urls="{{picture}}" bindtap='seeBig' />
+  <view class='status-lists' wx:if="{{optionsaimg}}" bindtap='xuanxiang' data-daan='A'>A、
+    <image class='xuanxiangpic' mode='aspectFit' src="{{optionsaimg}}" data-urls="{{optionsaimg}}" bindtap='seeBig' />
+  </view>
+  <view class='status-lists' wx:elif="{{optionsa}}" bindtap='xuanxiang' data-daan='A'>A、{{optionsa}}</view>
+
+  <view class='status-lists' wx:if="{{optionsbimg}}" bindtap='xuanxiang' data-daan='B'>B、
+    <image class='xuanxiangpic' mode='aspectFit' src="{{optionsbimg}}" data-urls="{{optionsbimg}}" bindtap='seeBig' />
+  </view>
+  <view class='status-lists' wx:elif="{{optionsb}}" bindtap='xuanxiang' data-daan='B'>B、{{optionsb}}</view>
+
+  <view class='status-lists' wx:if="{{optionscimg}}" bindtap='xuanxiang' data-daan='C'>C、
+    <image class='xuanxiangpic' mode='aspectFit' src="{{optionscimg}}" data-urls="{{optionscimg}}" bindtap='seeBig' />
+  </view>
+  <view class='status-lists' wx:elif="{{optionsc}}" bindtap='xuanxiang' data-daan='C'>C、{{optionsc}}</view>
+
+  <view class='status-lists' wx:if="{{optionsdimg}}" bindtap='xuanxiang' data-daan='D'>D、
+    <image class='xuanxiangpic' mode='aspectFit' src="{{optionsdimg}}" data-urls="{{optionsdimg}}" bindtap='seeBig' />
+  </view>
+  <view class='status-lists' wx:elif="{{optionsd}}" bindtap='xuanxiang' data-daan='D'>D、{{optionsd}}</view>
+
+  <view class='status-lists' wx:if="{{optionseimg}}" bindtap='xuanxiang' data-daan='E'>E、
+    <image mode='aspectFit' src="{{optionseimg}}" data-urls="{{optionseimg}}" bindtap='seeBig' />
+  </view>
+  <view class='status-lists' wx:elif="{{optionse}}" bindtap='xuanxiang' data-daan='E'>E、{{optionse}}</view>
+
+  <view class='status-lists' wx:if="{{optionsfimg}}" bindtap='xuanxiang' data-daan='F'>F、
+    <image mode='aspectFit' src="{{optionsfimg}}" data-urls="{{optionsfimg}}" bindtap='seeBig' />
+  </view>
+  <view class='status-lists' wx:elif="{{optionsf}}" bindtap='xuanxiang' data-daan='F'>F、{{optionsf}}</view>
+  <!--题目详解-->
+  <view class="analysis" wx:if="{{kaoshianswer[currentid]}}">
+    <view class="analysis-header">你的答案</view>
+    <view class="analysis-content">{{kaoshianswer[currentid]}}</view>
+</view>
+
+<!--页脚，收藏-->
+  <view hidden="{{!isLayerShow}}" class="footer-layer" bindtap="layerFooterClick"></view>
+  <view class="footer" animation="{{layerlayer.layerAnimation}}">
+    <view class="count">
+      <view class="submit" bindtap="submitTip">交卷</view>
+      <view class="time">{{time}}</view>
+    </view>
+  </view>
+
+  </view>

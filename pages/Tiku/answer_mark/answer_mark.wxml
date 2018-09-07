@@ -1,0 +1,18 @@
+<view class="score-header">
+    <view class="score-toux">
+      <image mode="aspectFill" src="{{userInfo.userPic}}"></image>
+    </view>
+    <view class="score-name">{{userInfo.studentname}}</view>
+    
+</view>
+<view class='subject'>科目:{{subject}}</view>
+        <view class="scoreinfo">分数:{{score}}分</view>
+        <view class='date'>时间:{{date}}</view>
+
+<view class="score-chao-box">
+<view class='score-chao'></view>
+
+</view>
+<view class="score-operation">
+    <view bindtap='gotoWDCT' class="score-operation-btn">错题回顾</view>
+</view>

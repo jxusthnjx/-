@@ -1,0 +1,64 @@
+<loading hidden="{{loading}}">
+  页面加载中...
+</loading>
+<view class='contanter' bindtouchend='handletouchend' bindtouchstart='handletouchstart' bindtouchmove='handletouchmove'>
+  <view class='header'>
+    <view class='tihao'>第{{currentid+1}}/{{count}}题</view>
+    <view class='type'>{{titype}}</view>
+    <view class='chapter'>第{{chapter}}章</view>
+    <view class='rongyi' wx:if="{{level=='1'}}">容易</view>
+    <view class='zhongdeng' wx:if="{{level=='2'}}">中等</view>
+    <view class='nan' wx:if="{{level=='3'}}">较难</view>
+    <view class='nan' wx:if="{{necessary}}">必考题</view>
+  </view>
+  <view class='content' wx:if="{{contentimg}}">
+    <image mode='aspectFit' src="{{contentimg}}" data-urls="{{contentimg}}" bindtap='seeBig' />
+  </view>
+  <view class='content' wx:else>{{currentid+1}}、{{content}}</view>
+  <image style="margin: 0 auto;background-color:#fff;" src="{{picture}}" mode='aspectFit' wx:if="{{picture}}" data-urls="{{picture}}" bindtap='seeBig' />
+  <view class='status-lists' wx:if="{{optionsaimg}}">A、
+    <image class='xuanxiangpic' mode='aspectFit' src="{{optionsaimg}}" data-urls="{{optionsaimg}}" bindtap='seeBig' />
+  </view>
+  <view class='status-lists' wx:elif="{{optionsa}}">A、{{optionsa}}</view>
+
+  <view class='status-lists' wx:if="{{optionsbimg}}">B、
+    <image class='xuanxiangpic' mode='aspectFit' src="{{optionsbimg}}" data-urls="{{optionsbimg}}" bindtap='seeBig' />
+  </view>
+  <view class='status-lists' wx:elif="{{optionsb}}">B、{{optionsb}}</view>
+
+  <view class='status-lists' wx:if="{{optionscimg}}">C、
+    <image class='xuanxiangpic' mode='aspectFit' src="{{optionscimg}}" data-urls="{{optionscimg}}" bindtap='seeBig' />
+  </view>
+  <view class='status-lists' wx:elif="{{optionsc}}">C、{{optionsc}}</view>
+
+  <view class='status-lists' wx:if="{{optionsdimg}}">D、
+    <image class='xuanxiangpic' mode='aspectFit' src="{{optionsdimg}}" data-urls="{{optionsdimg}}" bindtap='seeBig' />
+  </view>
+  <view class='status-lists' wx:elif="{{optionsd}}">D、{{optionsd}}</view>
+
+  <view class='status-lists' wx:if="{{optionseimg}}">E、
+    <image mode='aspectFit' src="{{optionseimg}}" data-urls="{{optionseimg}}" bindtap='seeBig' />
+  </view>
+  <view class='status-lists' wx:elif="{{optionse}}">E、{{optionse}}</view>
+
+  <view class='status-lists' wx:if="{{optionsfimg}}">F、
+    <image mode='aspectFit' src="{{optionsfimg}}" data-urls="{{optionsfimg}}" bindtap='seeBig' />
+  </view>
+  <view class='status-lists' wx:elif="{{optionsf}}">F、{{optionsf}}</view>
+  <!--题目详解-->
+  <view class="analysis">
+    <view class="analysis-header">题目详解</view>
+    <view class="analysis-content">{{answer}}</view>
+    <view class="analysis-content">{{tip}}</view>
+</view>
+
+<!--页脚，收藏-->
+  <view hidden="{{!isLayerShow}}" class="footer-layer" bindtap="layerFooterClick"></view>
+  <view class="footer" animation="{{layerlayer.layerAnimation}}">
+    <view class="count">
+      <view class="collect" wx:if="{{!iscollect}}" bindtap="collectList" data-ti="{{objectid}}" data-info="0">收藏</view>
+      <view class="collect active" wx:else bindtap="collectList" data-ti="{{objectid}}" data-info="1">取消收藏</view>
+    </view>
+  </view>
+
+  </view>

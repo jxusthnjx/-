@@ -1,0 +1,135 @@
+/*考试结果*/
+page{
+    background: rgb(100, 145, 241);
+    text-align: center;
+}
+.score-header {
+    position: relative;
+    display: inline-block;
+    margin: 71rpx 0 0 6rpx;
+    padding: 0 0 80rpx 140rpx;
+    font-size: 28rpx;
+    text-align: left; 
+}
+.score-header .score-name {
+    font-size: 35rpx;
+}
+.score-header .score-toux {
+    position: absolute;
+    left: 0;
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 55rpx;
+    background: #c8d9a5;
+    overflow: hidden; 
+}
+.score-header .score-toux image {
+    width: 100%;
+    height: 100%; 
+}
+.score-header .score-info {
+    font-size: 24rpx; 
+}
+.score-header .score-info .red {
+    display: inline;
+    color: #f33; 
+}
+.score-header .score-info .score-num,.score-header .score-info .score-time{
+    display: inline;
+}
+.score-header .score-time {
+    padding-left: 20rpx; 
+}
+
+.scoreinfo{
+  padding-left: 50rpx;
+  color:#f33;
+  font-size: 40rpx;
+}
+.subject{
+  padding-left: 50rpx;
+  color:#fff;
+  font-size: 30rpx;
+}
+.date{
+  padding-left: 50rpx;
+  color:#fff;
+  font-size: 30rpx;
+}
+.score-chao-tip {
+    padding: 7rpx 0 0;
+    font-size: 24rpx;
+    text-align: center; 
+}
+/*背景*/
+.score-chao-box {
+    position: relative;
+    width: 750rpx;
+    height: 638rpx;
+    background: url(http://bmob-cdn-17114.b0.upaiyun.com/2018/08/28/bb827aca404bc1948090273ffedbbe6d.jpg) no-repeat center bottom;
+    background-size: 750rpx 454rpx; 
+}
+/*最上面,学渣*/
+.score-chao-box .score-chao {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, 0, 0px);
+    transform: translate3d(-50%, 0, 0px);
+    top:25rpx;
+    width: 539rpx;
+    height: 121rpx;
+    margin-left: 8rpx;
+    background: url(http://bmob-cdn-17114.b0.upaiyun.com/2018/09/06/859987f1401fae1280533f2be9ed63cf.png) no-repeat;
+    background-size: 539rpx auto; 
+}
+/*人,学渣*/
+.score-chao-box .score-img {
+    position: absolute;
+    width: 421rpx;
+    height: 280rpx;
+    left: 165rpx;
+    top: 294rpx;
+    background: url(http://bmob-cdn-17114.b0.upaiyun.com/2018/09/06/859987f1401fae1280533f2be9ed63cf.png) no-repeat;
+    background-size: 421rpx 280rpx; 
+}
+/*最上面,学霸*/
+.score-chao-box.active .score-chao {
+    background: url(http://bmob-cdn-17114.b0.upaiyun.com/2018/08/28/449b409b4037942480f02129452fc8e9.png) no-repeat;
+    background-size: 539rpx auto; 
+}
+/*人,学霸*/
+.score-chao-box.active .score-img {
+    /*background: url() no-repeat;*/
+    background-size: 421rpx 280rpx; 
+}
+.score-fx {
+    padding: 40rpx 0;
+    font-size: 28rpx;
+    text-align: center;
+    vertical-align: middle;
+}
+.score-fx view {
+    margin-right: 13rpx;
+    vertical-align: middle;
+}
+.score-fx .iconfont {
+    margin-left: 10rpx;
+    vertical-align: middle;
+}
+.score-operation {
+    padding: 40rpx 0;
+    border-top: 1px solid #f6f6f6;
+    text-align: center;
+}
+.score-operation .score-operation-btn {
+    display: inline-block;
+    width: 230rpx;
+    height: 60rpx;
+    margin: 0 47rpx;
+    border-radius: 30rpx;
+    background: #0ae;
+    line-height: 60rpx;
+    font-size: 26rpx;
+    color: #fff;
+    text-align: center;
+}
