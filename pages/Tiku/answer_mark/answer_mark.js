@@ -5,9 +5,9 @@ var app = getApp();
 Page({
   data: {
    userInfo:{},
-   subject:'',//题目类型
+   subject:'',//科目名称，用于显示
+   courseid:'',//科目id，保存成绩要用
    score:'',//得分
-   grades:'',//等级
   },
   gotoWDCT(){
     if(app.globalData.error.length > 0){
@@ -30,6 +30,7 @@ Page({
       })
     }
   },
+
   onLoad (params) {
     var that =this;
     var date =new Date();
@@ -38,6 +39,7 @@ Page({
     that.setData({
       subject:params.subject,
       score: params.score,
+      courseid:params.courseid,
       date:today
     })
     var user = wx.getStorageSync('objectId');
@@ -49,12 +51,25 @@ Page({
 
       })
     })
-    
-    var grades = (parseFloat(params.score)/parseFloat(params.allscore))*100
+    //记录成绩
+    const query =wx.Bmob.Query('course');
+    query.get(params.courseid).then(res=>{
+      if(res.isscore){
+        if(res.score<=params.score-0){
+          const q=wx.Bmob.Query('user_score');
+          q.set('username',that.data.userInfo.username);
+          q.set('studentname',that.data.userInfo.studentname);
+          q.set('courseid',params.courseid);
+          q.set('coursename',params.subject);
+          q.set('score',params.score-0);
+          q.save().then(res=>{
 
-    if(grades >=80){
-      that.data.grades = 'active';
-    }
+          })
+        }
+      }
+    })
+
+    
   },
   onShareAppMessage: function () {
     return {

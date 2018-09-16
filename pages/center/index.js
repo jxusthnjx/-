@@ -36,7 +36,10 @@ about:function(){
 },
   //密码修改
   modify: function () {
-    wx.getStorage({
+    wx.navigateTo({
+      url: 'modify/modify',
+    })
+    /*wx.getStorage({
       key: 'objectId',
       success: function (res) {
         wx.navigateTo({
@@ -48,11 +51,14 @@ about:function(){
           title: '你还未绑定账号!',
         })
       }
-    })
+    })*/
   },
 
   login:function(e){
-    wx.getStorage({
+    wx.navigateTo({
+      url: '../Login/login',
+    })
+    /*wx.getStorage({
       key: 'objectId',
       success: function(res) {
         wx.showToast({
@@ -64,7 +70,8 @@ about:function(){
           url: '../Login/login',
         })
       }
-    })
+    })*/
+
 
   },
   /**

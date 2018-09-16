@@ -15,4 +15,5 @@
 </view>
 <view class="score-operation">
     <view bindtap='gotoWDCT' class="score-operation-btn">错题回顾</view>
+    <view class="score-operation-btnn">点击右上角将你的成绩分享给好友</view>
 </view>

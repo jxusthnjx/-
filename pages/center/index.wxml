@@ -29,7 +29,7 @@
         <text>关于小程序</text>
     </view>
         <view class="line_x"></view>
-        <button hidden='{{ishiden}}' type='primary' bindtap='login'>绑定账号</button>
+        <button hidden='{{ishiden}}' class='login-btn' bindtap='login'>绑定账号</button>
 </view>
 <!--/个人中心列表项end-->
 

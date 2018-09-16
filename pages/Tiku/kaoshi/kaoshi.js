@@ -616,7 +616,7 @@ Page({
     app.globalData.error=error;
     //console.log(app.globalData.error);
     wx.redirectTo({
-      url: '../answer_mark/answer_mark?allscore='+that.data.totalscore+'&score='+totalscore+'&subject='+that.data.coursename,
+      url: '../answer_mark/answer_mark?courseid='+that.data.courseid+'&score='+totalscore+'&subject='+that.data.coursename,
     })
   },
 

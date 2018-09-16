@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    courseid:'',//课程id
     tilist:[],//题库
     currentid:0,//当前题目id,用来显示当前题目
     count:0,//题目总数
@@ -79,6 +80,7 @@ getCollect:function(){
    */
   onLoad: function (options) {
     var that = this;
+    
     //如果是收藏本
     if(options.objectId=='9'){
       wx.getStorage({
@@ -126,6 +128,21 @@ getCollect:function(){
         })
         that.ti(0);
     }else{
+      //保存课程id，退出时需要记录题号
+      that.setData({
+        courseid: options.objectId//课程id，如果是收藏本和错题本就是9和100.不是课程id
+      })
+      wx.getStorage({
+        key: options.objectId,//获取上次最后浏览的题号
+        success: function(res) {
+          console.log(res.data);
+          that.setData({
+            currentid: res.data
+          })
+
+        },
+      })
+     // console.log(id);
       const query = wx.Bmob.Query('paper');
       query.equalTo('courseid', '==', options.objectId);
       query.limit(1000);
@@ -134,7 +151,7 @@ getCollect:function(){
         that.setData({
           tilist: res
         })
-        that.ti(0);
+        that.ti(that.data.currentid);
         that.setData({
           loading: true
         })
@@ -173,6 +190,11 @@ getCollect:function(){
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+    var that =this;
+    //保存当前题号
+    if(!!that.data.courseid){
+      wx.setStorageSync(that.data.courseid, that.data.currentid);
+    }
     
   },
 
@@ -199,6 +221,7 @@ getCollect:function(){
 
 //题目处理函数，将题目信息传过来，对它进行设置
   ti:function(e){
+    //console.log(e);
     var that = this;
     //console.log(that.data.tilist);
     if(!!that.data.tilist){
@@ -245,7 +268,7 @@ getCollect:function(){
       }
       if (!!that.data.tilist[n].Chapter) {
         that.setData({
-          chapter: that.data.tilist[n].Chapter
+          chapter: '第'+that.data.tilist[n].Chapter+'章'
         })
       }
       if (!!that.data.tilist[n].level) {

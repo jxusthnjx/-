@@ -5,7 +5,7 @@
   <view class='header'>
     <view class='tihao'>第{{currentid+1}}/{{count}}题</view>
     <view class='type'>{{titype}}</view>
-    <view class='chapter'>第{{chapter}}章</view>
+    <view class='chapter'>{{chapter}}</view>
     <view class='rongyi' wx:if="{{level=='1'}}">容易</view>
     <view class='zhongdeng' wx:if="{{level=='2'}}">中等</view>
     <view class='nan' wx:if="{{level=='3'}}">较难</view>
