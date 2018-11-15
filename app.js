@@ -1,7 +1,7 @@
 //app.js
 
 var Bmob = require('utils/Bmob-1.6.2.min.js');
-Bmob.initialize("", "","");
+Bmob.initialize("你自己的application id", "你自己的REST api key");
 App({
   onLaunch: function () {
 
